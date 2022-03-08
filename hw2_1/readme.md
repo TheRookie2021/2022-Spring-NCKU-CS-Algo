@@ -5,7 +5,7 @@
 - output: 輸出此數列 a 的逆序數。此數字可能會很大，請先用 524287 對其取餘數再輸出
 
 ---
-# pitfall: beside algorithm - data overflow
+# pitfall: beyond algorithm - data overflow
 - the # of input number is very large 
 - the number of the data is very large
 
