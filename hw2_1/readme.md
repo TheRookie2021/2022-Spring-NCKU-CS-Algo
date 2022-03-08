@@ -7,5 +7,5 @@
 ---
 # pitfall: beyond algorithm - data overflow
 - the # of input number is very large 
-- the number of the data is very large
+- the data number is very large
 
