@@ -35,6 +35,8 @@ void print_comb(int *arr, int num, int max)
 }
 
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int N;
     int temp;
     cin>>N;
