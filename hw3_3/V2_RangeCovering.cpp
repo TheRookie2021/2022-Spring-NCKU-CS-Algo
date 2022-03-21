@@ -2,7 +2,7 @@
 #include <list>
 #include <set>
 using namespace std;
-
+//wrong ans+ TLE
 pair<int,int> rangecover(list<int> *arr, int num, int start_i)
 {
     int l_ptr, r_ptr;
