@@ -1,0 +1,11 @@
+10 3
+15 15 55 Margarita
+10 15 45 WhiteLady
+10 20 60 SilentThird
+30 25 50 XYZ
+20 20 60 SideCar
+25 15 55 Balalaika
+10 10 35 OldFashion
+15 10 30 Mojito
+25 20 60 CubaLibre
+30 15 40 Highball
