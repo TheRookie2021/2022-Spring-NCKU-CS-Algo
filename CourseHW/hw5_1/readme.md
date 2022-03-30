@@ -23,5 +23,5 @@
     - 可以試試看quick select
 
 # pitfalls
-    - use randomize quick select to enhance the time complexity
+    - use randomize quick select to enhance the speed
     - RTE: be careful of the remainer % with random variable, it could be zero and lead to the "divided by zero" situation.  
