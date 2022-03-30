@@ -8,8 +8,8 @@
     His cocktails are all made from lime juice, syrup, and base liquor The base liquor he uses is 100% alcohol.
     That is, for instance, a glass of cocktail is made of 20ml lime juice, 20 ml syrup, 60ml base liliquor, then the concentration of this cocktail is 60\%.
     Giving the material recipe for N glasses of cocktail, please help him find out which cocktail gets the guest drunk.
-=== 
-## input/output
+
+# input/output
     - 第一行輸入兩個整數 N 和 K 代表總共有 N 杯調酒，以及濃度第 K 高的調酒會讓客人醉倒。
     接下來有 N 行，每行皆有三個整數 a, b, c 以及一個字串 s
     分別代表所使用的
@@ -22,7 +22,6 @@
     - Please print the name of the cocktail which gets the guest drunk.
     - 可以試試看quick select
 
-===
 # pitfalls
     - use randomize quick select to enhance the time complexity
     - RTE: be careful of the remainer % with random variable, it could be zero and lead to the "divided by zero" situation.  
