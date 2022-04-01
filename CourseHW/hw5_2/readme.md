@@ -20,3 +20,7 @@
     Please print which cocktail he would drink.
 
 # pitfalls
+- bug: Also, if 2 cocktails have the same amount, the cocktail with the lower lexicographical order will be ranked higher.
+- detail: string comparison vs char comparison
+- tech: sort with custom compare function, map structure is internally sorted, and its find() is fit for the counting problem
+- 
