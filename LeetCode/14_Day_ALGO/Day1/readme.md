@@ -7,22 +7,22 @@ You must write an algorithm with O(log n) runtime complexity.
 
 # input/output
 - Example 1:
-    Input: nums = [-1,0,3,5,9,12], target = 9
-    Output: 4
-    Explanation: 9 exists in nums and its index is 4
+    Input: nums = [-1,0,3,5,9,12], target = 9  
+    Output: 4  
+    Explanation: 9 exists in nums and its index is 4  
 
 - Example 2:
-    Input: nums = [-1,0,3,5,9,12], target = 2
-    Output: -1
-    Explanation: 2 does not exist in nums so return -1
+    Input: nums = [-1,0,3,5,9,12], target = 2  
+    Output: -1  
+    Explanation: 2 does not exist in nums so return -1  
 
-# Constraints:
+# Constraints
 
 1 <= nums.length <= 104
 -104 < nums[i], target < 104
 All the integers in nums are unique.
 nums is sorted in ascending order.
---- 
+---
 # pitfalls
 - when using index ptr assigned with .size(), be aware that max index number is (index size -1)
 - always consider the special case on the boundary
