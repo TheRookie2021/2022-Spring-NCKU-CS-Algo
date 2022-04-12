@@ -26,7 +26,7 @@
     答案應該是10 不是20  
 - 小青蛙是去了又回來 注意一下題目敘述  
 - greedy algorithm:  
-    - obstacles: not sure how to choose the greedy rules? (how to conclude the rules? intervals? steps? size? pattern? should i do statistics? should i unfold the back and forth route? what is the certain best choice?)
+    - obstacles: not sure how to choose the greedy rules. (how to conclude the rules? intervals? steps? size? pattern? should i do statistics? should i unfold the back and forth route? what is the certain best choice?)
     - i cannot think thoroughly and fast in this problem. i could only try and error by writing each version before coming up with the counterexamples.(so inefficient QQ) In the end, after tring all i could try, i found myself overthinking in this problem.  
     // greedy plan E(pass, finally): choose the best step for each step  
         //priorty of choice when frog is on index i:  
