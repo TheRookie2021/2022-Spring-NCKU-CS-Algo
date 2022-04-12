@@ -20,8 +20,19 @@
     For each test case, output the maximum distance that needs to be jumped.
 
 # pitfalls
-    3 20
-    s 5 s 10 s 15
-    答案應該是10 不是20
+- 題意釐清
+    3 20  
+    s 5 s 10 s 15  
+    答案應該是10 不是20  
+- 小青蛙是去了又回來 注意一下題目敘述  
+- greedy algorithm:  
+    - obstacles: not sure how to choose the greedy rules? (how to conclude the rules? intervals? steps? size? pattern? should i do statistics? should i unfold the back and forth route? what is the certain best choice?)
+    - i cannot think thoroughly and fast in this problem. i could only try and error by writing each version before coming up with the counterexamples.(so inefficient QQ) In the end, after tring all i could try, i found myself overthinking in this problem.  
+    // greedy plan E(pass, finally): choose the best step for each step  
+        //priorty of choice when frog is on index i:  
+        // 1. look i+1,   
+            // if it is big stone, jump  
+            // if it is small stone, jump the i+2   
+            // (no need to consider the boundary for banks are consider big)  
+        // 2. jump and record the distance(Q: by simply seting a variable or max heap?)  
 
-    小青蛙是去了又回來 注意一下題目敘述

@@ -1,68 +1,87 @@
 #include <iostream>
-#include <list>
+#include <vector>
 #include <cmath>
+#include <queue>
 // #include<string.h>
 using namespace std;
-typedef pair<int, int> size_pos; // 1 for small, 2 for big
+#define SINKED 0
+#define SMALL 1
+#define BIG 2
 
-void jump_plan(list<size_pos> input, int num_big, int width)
+typedef pair<int, int> size_pos; 
+// 1 for small, 2 for big
+
+void jump_plan(vector<size_pos> input, vector<int> index_big, int width)
 {
     // plan to minimize the distance he jumps each time
     // greedy plan A: choose the smallest every time
     // greedy plan B: if there is big stone, choose the big stone first every time
+    // greedy plan C: find the distance of intervals of small stones between two big stone,
+    // odd stones within :
+    // even stones within:
+    // substructure: the interval between two rocks
+    // greedy plan D:find the interval of big stone(include the banks) with
+        // 1. largest distance and
+        // 2. the least number of stones
+    // greedy plan E(pass, finally): choose the best step for each step
+        //priorty of choice when frog is on index i:
+        // 1. look i+1, 
+            // if it is big stone, jump
+            // if it is small stone, jump the i+2 
+            // (no need to consider the boundary for banks are consider big)
+        // 2. jump and record the distance(Q: by simply seting a variable or max heap?)
 
-    // output the maximum distance that needs to be jumped
-    int max_distance=0;
-    // int min_step;
-    list<size_pos>::iterator itr;
-    for (itr = input.begin(); itr != input.end(); )
+
+    int max_distance = 0;
+    // O(n)
+    // jump forth
+    for (int i = 0; i < input.size()-1;)
     {
-        if (itr->first == 2)
+        if (input[i + 1].first == BIG)
         {
-            // big stone
-            if (max_distance < width - itr->second)
-            {
-                max_distance = width - itr->second;
-            }
-            itr++;
+            // cout<<"b";
+            // cout << max_distance << endl;
+            max_distance =
+                (max_distance < input[i + 1].second - input[i].second) ? 
+                input[i + 1].second - input[i].second : max_distance;
+            i++;
         }
-        else if (itr->first == 1)
+        else if (input[i + 1].first == SMALL)
         {
-            // small stone
-            if (max_distance < width - itr->second)
-            {
-                max_distance = width - itr->second;
-            }
-            itr = input.erase(itr);
+            
+            // cout<<"s";
+            // cout << max_distance << endl;
+            // cout<<input[i + 2].second <<" "<< input[i].second<<endl;
+            // cout<<i<<endl;
+            max_distance =
+                (max_distance < input[i + 2].second - input[i].second) ? 
+                input[i + 2].second - input[i].second : max_distance;
+            if (input[i + 2].first == SMALL)
+                input[i + 2].first = SINKED;
+            i += 2;
         }
-    } // for i
-    list<size_pos>::reverse_iterator ritr;
-    if (input.empty())
-        max_distance = width;
-    else
+        
+   }
+    // jump back
+    for (int i = input.size() - 1; i > 0;)
     {
-        for (ritr = input.rbegin(); ritr != input.rend(); ritr++)
+        
+        if (input[i - 1].first != SINKED)
         {
-            if (ritr->first == 2)
-            {
-                // big stone
-                if (max_distance < width - ritr->second)
-                {
-                    max_distance = width - ritr->second;
-                }
-            }
-            else if (ritr->first == 1)
-            {
-                // small stone
-                if (max_distance < width - ritr->second)
-                {
-                    max_distance = width - ritr->second;
-                }
-                // ritr=input.erase(ritr);
-            }
-        } // for i
+            max_distance =
+                (max_distance < abs(input[i - 1].second - input[i].second)) ? 
+                abs(input[i - 1].second - input[i].second) : max_distance;
+            i--;
+        }
+        else 
+        {
+            max_distance =
+                (max_distance < abs(input[i - 2].second - input[i].second)) ? 
+                abs(input[i - 2].second - input[i].second) : max_distance;
+            i -= 2;
+        }
     }
-
+    // output the maximum distance that needs to be jumped
     cout << max_distance << endl;
 }
 int main()
@@ -73,26 +92,31 @@ int main()
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-        list<size_pos> input;
+        vector<size_pos> input;
         int temp;
-        int num_big = 0;
+        vector<int> index_big;
         cin >> n >> w;
+
+        input.push_back(size_pos(BIG, 0));
+        index_big.push_back(0);
         for (int j = 0; j < n; j++)
         {
-
             cin >> stone;
             cin >> temp;
             if (stone == 'b')
             {
-                input.push_back(size_pos(2, temp));
-                num_big++;
+                input.push_back(size_pos(BIG, temp));
+                index_big.push_back(j);
             }
             else if (stone == 's')
             {
-                input.push_back(size_pos(1, temp));
+                input.push_back(size_pos(SMALL, temp));
             }
+
         } // for j
-        jump_plan(input, num_big, w);
+        input.push_back(size_pos(BIG, w));
+        index_big.push_back(input.size()-1);
+        jump_plan(input, index_big, w);
 
     } // for i
     return 0;
