@@ -1,6 +1,6 @@
 # NCKU 2022 Algorithm
 1. The Role of Algorithms in Computing 
-2. Growth of Functions/ [hw1-1](/hw1_1/)[hw1-2](/hw1_2/)[hw1-3](/hw1_3/) 
+2. Growth of Functions/ [hw1-1](https://github.com/TheRookie2021/Algo_2022_Spring/tree/main/CourseHW/hw1_1/)[hw1-2](/hw1_2/)[hw1-3](/hw1_3/) 
 3. Recurrences/ [hw2-1](/hw2_1/)[hw2-2](/hw2_2/)[hw2-3](/hw2_3/)  
 4. Sort/ [hw3-1](/hw3_1/)[hw3-2](/hw3_2/)[hw3-3](/hw3_3/) 
 5. Sorting in Linear Time/ [hw4-1](/hw4_1/)[hw4-2](/hw4_2/)[hw4-3](/hw4_3/) 
