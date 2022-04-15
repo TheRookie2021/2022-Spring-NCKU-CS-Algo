@@ -11,7 +11,7 @@
 - insertion sort:  
     - select value from left to right, and compare that with the value(s) on its left side(which is already sorted), and insert it to the propter position(which may require moving the index of some values)
     - [wiki](https://zh.wikipedia.org/wiki/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
-```
+```c++
 void insertion_sort(int arr[], int len){
         int i,j,key;
         for (i=1;i!=len;++i){
@@ -29,7 +29,7 @@ void insertion_sort(int arr[], int len){
     - divid: break the array into two subsets recursively  
     - conquer: merge the two subset into a sorted one(copy the two sorted subset into another space, and put them into the original array interval one by one from the copied arrays with the proper order)  
     - [wiki](https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)
-```
+```c++
 void Merge(vector<int> &Array, int front, int mid, int end) {
     // preconditions:
     // Array[front...mid] is sorted
@@ -69,7 +69,7 @@ void MergeSort(vector<int> &Array, int front, int end) {
     - sort: return the value in index[0] and swap that with index[top--]. Then, heapify.
 - [wiki](https://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F)
 
-```
+```c++
 void max_heapify(int arr[], int start, int end) {
     // 建立父節點指標和子節點指標
     int dad = start;
@@ -104,8 +104,7 @@ void heap_sort(int arr[], int len) {
     - divide: divid the array into two part by comparing the entries with pivot, values smaller than pivot and values larger than pivot.(in-place sort)
     - recursion: recursivly do the two step above.
 - [geek](https://www.geeksforgeeks.org/quick-sort/)
-```
-
+```c++
 // A utility function to swap two elements
 void swap(int* a, int* b)
 {
