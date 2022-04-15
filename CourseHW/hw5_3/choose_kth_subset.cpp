@@ -24,17 +24,17 @@ void judging(int *cocktails, int num, int num_of_judges, int kth)
             
             //delete smaller, and input smaller, or delete larger, and input larger
             cout << last_output<<" ";
-        }
-        // else if (cocktails[i] > last_output && last_deleted < last_output)
-        // {
-        //     //delete smaller, and input larger: itr--
-        //     cout<<*(--last_output_itr)<<" ";
+        }//bug: when the deleted element is also the last output->must start again?
+        else if (cocktails[i] > last_output && last_deleted < last_output)
+        {
+            //delete smaller, and input larger: itr--
+            cout<<*(--last_output_itr)<<" ";
 
-        // }else if (cocktails[i] < last_output && last_deleted > last_output)
-        // {
-        //     //delete larger, and input smaller: itr--
-        //     cout<<*(++last_output_itr)<<" ";
-        // }
+        }else if (cocktails[i] < last_output && last_deleted > last_output)
+        {
+            //delete larger, and input smaller: itr--
+            cout<<*(++last_output_itr)<<" ";
+        }
         else
         {
             multiset<int>::iterator itr = s.begin();
@@ -43,7 +43,6 @@ void judging(int *cocktails, int num, int num_of_judges, int kth)
             last_output = *itr;
             last_output_itr=itr;
         }
-
         // for(auto i:s){
         //     cout<<i<<" ";
         // }
@@ -54,8 +53,16 @@ void judging(int *cocktails, int num, int num_of_judges, int kth)
         last_deleted = cocktails[i - num_of_judges + 1];
         if (s.count(last_deleted) > 1)
         {
-            // O(lgm *1)
-            s.erase(s.find(last_deleted));
+            // // O(lgm *1)
+            // if(last_deleted==last_output)
+            //     if(kth==num_of_judges)
+            //         last_output_itr;
+            //     else if (kth == 0)
+            //         last_output_itr;
+                    
+            // else
+                s.erase(s.find(last_deleted));
+    
         }
         else
         {
@@ -81,7 +88,6 @@ void judging(int *cocktails, int num, int num_of_judges, int kth)
             cin>>cocktails[i];
         }
         judging(cocktails,n,m,k);
-
         // for(int i=0;i<n;i++){
         //     cout<<cocktails[i];
         // }

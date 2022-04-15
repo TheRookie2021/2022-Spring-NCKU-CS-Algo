@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 void swap(int *a, int *b)
 {
     int temp = *a;
@@ -20,16 +19,21 @@ void swap(int *a, int *b)
 */
 void min_heapify(int *arr, int i, int top)
 {
+    // i: parent, L: left child, R: right child
     int L = i * 2 + 1, R = i * 2 + 2;
-    int min;
+    int min;// index of min value of the parent and childs
+
+    // if lchild exist, and if lchild is smaller than min
     if(L<=top && arr[L]<arr[i]){
         min = L;
     }else{
-        min=i;
+        min = i;
     }
+    // if rchild exist, and if rchild is smaller than min
     if(R<=top && arr[R]<arr[min]){
         min = R;
     }
+    //if min is not the parent, swap the values and continue recursion(top-down)
     if(min!=i){
         swap(&(arr[min]), &(arr[i]));
         min_heapify(arr, min, top);
@@ -39,6 +43,7 @@ void min_heapify(int *arr, int i, int top)
 
 void build_heapify(int *arr, int top)
 {
+    // bottom-up checking the child
     for (int i = top / 2; i > -1; i--)
     {
         min_heapify(arr, i, top);
@@ -47,7 +52,7 @@ void build_heapify(int *arr, int top)
 
 void heap_sort(int *arr, int top)
 {
-                       // passing copy of arr (do not change the value)
+    // passing copy of arr (do not change the value)
     int temp[top];
     for (int i = 0; i < top; i++)
         temp[i] = arr[i];
