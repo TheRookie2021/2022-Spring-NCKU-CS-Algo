@@ -8,6 +8,6 @@
     Memory Usage: 5.8 MB, less than 80.23% of C++ online submissions for Fibonacci Number.  
 
 # conclusion
-- bottom up iteratw on filling the table is faster in fibonacci number
+- bottom up iterate on filling the table is faster in fibonacci number
 
 [leetcode- fibonacci number](https://leetcode.com/problems/fibonacci-number/submissions/)
