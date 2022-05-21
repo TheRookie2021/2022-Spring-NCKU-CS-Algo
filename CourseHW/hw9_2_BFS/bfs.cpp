@@ -79,7 +79,7 @@ int main()
             }
         } // for( push all dir )
 
-        // cout<<cur_pos.first<<" "<<cur_pos.second<<" step: "<<step<<endl;
+        cout<<cur_pos.first<<" "<<cur_pos.second<<" step: "<<step<<endl;
         
     } // while queue not empty
 
