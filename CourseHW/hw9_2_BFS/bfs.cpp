@@ -75,7 +75,7 @@ int main()
             {
                 q.push(pair<StepCount, pair<int, int>>(step + 1, temp));
 //!!!!!!!!!!!!!!!!!!!!!!!!! we must mark the step here, or it may cause runtime error(infinit loop)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                maze[temp.first][temp.second] = 0; 
+                // maze[temp.first][temp.second] = 0; 
             }
         } // for( push all dir )
 

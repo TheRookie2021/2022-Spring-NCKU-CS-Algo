@@ -71,6 +71,201 @@
     redundent steps!!
 ```
 ---
+
+<table>
+<tr>
+<th> bug </th>
+<th> better </th>
+</tr>
+<tr>
+<td>
+
+    bug one(with redundent steps)
+    1 1 step: 0
+    1 2 step: 1
+    2 1 step: 1
+    1 3 step: 2
+    2 2 step: 2
+    2 2 step: 2
+    3 1 step: 2
+    1 4 step: 3
+    2 3 step: 3
+    2 3 step: 3
+    3 2 step: 3
+    2 3 step: 3
+    3 2 step: 3
+    3 2 step: 3
+    4 1 step: 3
+    1 5 step: 4
+    2 4 step: 4
+    2 4 step: 4
+    3 3 step: 4
+    2 4 step: 4
+    3 3 step: 4
+    3 3 step: 4
+    4 2 step: 4
+    2 4 step: 4
+    3 3 step: 4
+    3 3 step: 4
+    4 2 step: 4
+    3 3 step: 4
+    4 2 step: 4
+    4 2 step: 4
+    5 1 step: 4
+    2 5 step: 5
+    2 5 step: 5
+    3 4 step: 5
+    2 5 step: 5
+    3 4 step: 5
+    3 4 step: 5
+    4 3 step: 5
+    2 5 step: 5
+    3 4 step: 5
+    3 4 step: 5
+    4 3 step: 5
+    3 4 step: 5
+    4 3 step: 5
+    4 3 step: 5
+    5 2 step: 5
+    2 5 step: 5
+    3 4 step: 5
+    3 4 step: 5
+    4 3 step: 5
+    3 4 step: 5
+    4 3 step: 5
+    4 3 step: 5
+    5 2 step: 5
+    3 4 step: 5
+    4 3 step: 5
+    4 3 step: 5
+    5 2 step: 5
+    4 3 step: 5
+    5 2 step: 5
+    5 2 step: 5
+    3 5 step: 6
+    3 5 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    3 5 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    3 5 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    5 3 step: 6
+    3 5 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    5 3 step: 6
+    3 5 step: 6
+    4 4 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    5 3 step: 6
+    4 4 step: 6
+    5 3 step: 6
+    5 3 step: 6
+    5 3 step: 6
+    4 5 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    4 5 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    5 4 step: 7
+    5 4 step: 7
+
+</td>
+<td>
+    normal 
     5 5
     1 1 5 5
     1 1 1 1 1
@@ -106,3 +301,6 @@
     8
 
 
+</td>
+</tr>
+</table>
