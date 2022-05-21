@@ -80,7 +80,6 @@
 <tr>
 <td>
 
-    bug one(with redundent steps)
     1 1 step: 0
     1 2 step: 1
     2 1 step: 1
@@ -265,7 +264,7 @@
 
 </td>
 <td>
-    normal 
+
     5 5
     1 1 5 5
     1 1 1 1 1
