@@ -10,7 +10,7 @@ int main()
     cout << x << endl;
     for (int i = 0; i < x; i++)
     {
-        cout << rand() % 100 << " ";
+        cout << rand() % 100-50 << " ";
     }
 
     return 0;
