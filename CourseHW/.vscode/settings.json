@@ -10,6 +10,7 @@
         "random": "cpp",
         "limits": "cpp",
         "valarray": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "list": "cpp"
     }
 }
