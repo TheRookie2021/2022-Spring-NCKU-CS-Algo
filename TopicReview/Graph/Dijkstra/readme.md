@@ -1,5 +1,5 @@
 # Implementing Dijkstra Algorithm 
-    - [geekforgeek](https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)
+- [geekforgeek](https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/)
 
 
 # input/output
@@ -22,7 +22,7 @@
     4 3 0
 
 # adj list or adj matrix
-    - syntax in c++:(array of vector?)[https://stackoverflow.com/questions/35501439/array-of-vectors-or-vector-of-arrays ]
+- syntax in c++: [arrayofvector](https://stackoverflow.com/questions/35501439/array-of-vectors-or-vector-of-arrays)
 ```
 vector<int> adj[N]
 
