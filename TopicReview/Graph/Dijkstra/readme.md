@@ -29,5 +29,5 @@ vector<int> adj[N]
 ```
 
 # bug 
-    - if the acendent(the node that has been visited) in the spanning tree is modified, we need to update all its decendent
+    - if the ascendant(the node that has been visited) in the spanning tree is modified, we need to update all its descendant
     - intuitive sol: push that node into the queue again
