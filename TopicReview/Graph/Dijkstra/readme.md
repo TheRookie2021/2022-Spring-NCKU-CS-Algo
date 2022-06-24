@@ -10,7 +10,7 @@
     S = 0
     Output:
     0 9
-...  
+
     Input:
     V = 3, E = 3
     u = 0, v = 1, w = 1
