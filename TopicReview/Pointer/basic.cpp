@@ -119,17 +119,28 @@ int main(){
     cout << "=======================================\n";
     
     // futher testing among different modification on different parts:
+
     cout<<"rb root: "<<rb->data<<endl;
+    int original=rb->data;
     modify_node_passing_ptr(rb);
+    if(original!=rb->data)cout<<"---modify successfully---\n";
+    else cout<<"---modify failed---\n";
     cout<<"rb root after modify_node_passing_ptr : "<<rb->data<<endl<<endl;
-
-    modify_pointer_passing_ptr(rb);
-
-    cout<<"rb root after modify_pointer_passing_ptr : "<<rb->data<<endl<<endl;
-
-    modify_pointer_passing_ptraddr(&rb);
+     
     
+    original=rb->data;
+    modify_pointer_passing_ptr(rb);
+    if(original!=rb->data)cout<<"---modify successfully---\n";
+    else cout<<"---modify failed---\n";
+    cout<<"rb root after modify_pointer_passing_ptr : "<<rb->data<<endl<<endl;
+    
+
+    original=rb->data;
+    modify_pointer_passing_ptraddr(&rb);
+    if(original!=rb->data)cout<<"---modify successfully---\n";
+    else cout<<"---modify failed---\n";
     cout<<"rb root after modify_pointer_passing_ptraddr : "<<rb->data<<endl<<endl;
+    
 
     // bug: whyyyyy delete works in a function even if it's pass by value?
     return 0;
