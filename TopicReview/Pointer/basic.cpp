@@ -6,7 +6,7 @@ struct node{
     int data;
     nodeptr lc, rc;
 };
-//Q: how a function with argument works in c ?
+//Q: how a function with parameter works in c ?
 //A: the function passes the copy of the variable(dosen't matter what type of data it pass) to another space, 
 //      and modify that copy(concept: pass by value), or do anything based on the copy(concept: pass by ref)
 // is it correct?
