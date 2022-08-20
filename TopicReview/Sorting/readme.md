@@ -100,7 +100,7 @@ void heap_sort(int arr[], int len) {
 
 ```
 - quick sort: O(nlgn), on average and best case; O(n^2) on worst case
-    - pivot: choose a pivot (by default the value at the end of the range), by median of three or randomize selection
+    - pivot: choose a pivot (by default the value at the end of the range) by 1. median of three or 2. randomize selection
     - divide: divid the array into two part by comparing the entries with pivot, values smaller than pivot and values larger than pivot.(in-place sort)
     - recursion: recursivly do the two step above.
 - [geek](https://www.geeksforgeeks.org/quick-sort/)

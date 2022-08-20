@@ -42,7 +42,7 @@ int rand_partition(vector<int> &vec, int start, int end)
 {
     srand(time(NULL));
     if ((start - end + 1) == 0)
-        return partition(vec, start, end); // RTE bug! be ware of divid with zero
+        return partition(vec, start, end); // RTE bug! be ware of divided by zero
 
     int i = start + (rand() % (start - end + 1));
     // int i=start;
