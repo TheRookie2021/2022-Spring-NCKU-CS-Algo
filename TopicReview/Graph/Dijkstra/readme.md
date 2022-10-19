@@ -1,7 +1,19 @@
 # Implementing Dijkstra Algorithm 
 - [geekforgeek](https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/)
-
-
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
+Queue!=priority queue
 # input/output
     Input:
     V = 2, E = 1

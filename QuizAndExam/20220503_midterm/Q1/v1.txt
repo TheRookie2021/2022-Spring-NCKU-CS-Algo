@@ -1,0 +1,46 @@
+
+#include <iostream>
+using namespace std;
+
+unsigned long long int f[92];
+
+void init_fib()
+{
+    for (int i = 0; i < 92; i++)
+        f[i] = 0;
+}
+
+
+void fib()
+{
+    f[0] = 1;
+    f[1] = 1;
+    for (int i = 2; i < 92; i++)
+    {
+        f[i] = f[i - 1] * i;
+    }
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    int h, total, M_v = n / 2;
+    unsigned long long int  counter = 1;
+    init_fib();
+    fib();
+
+    // for (int i = 1; i < 92; i++)
+    //     cout << f[i] << " ";
+    for (int i = 1; i <= M_v; i++)
+    {
+        h = n -( 2 * i);
+        total = h + i;
+       unsigned long long int ans = f[total] / (f[h] * f[i]);
+
+       counter += ans;
+    }
+    cout << counter;
+
+    return 0;
+}

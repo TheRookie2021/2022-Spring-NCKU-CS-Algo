@@ -9,10 +9,10 @@ void swap(int *a, int *b)
 }
 void heapify(int *arr, int top)
 {
-    // mid heap
+    // min heap
     // bottom up order
     // heap: 0~MAX-1
-    for (int i = top; i > -1; i--)
+    for (int i = top/2; i > -1; i--)
     {
         for (int j = i; j <= top;)
         {
