@@ -1,11 +1,11 @@
 # NCKU 2022 Algorithm Syllabus
-1. The Role of Algorithms in Computing 
-2. Growth of Functions/ 
-3. Recurrences/ 
-4. Sort/ 
-5. Sorting in Linear Time/ 
-6. Medians and Order Statistics/ 
-7. Greedy Algorithms/ 
+1. The Role of Algorithms in Computing
+2. Growth of Functions  
+3. Recurrences  
+4. Sort  
+5. Sorting in Linear Time  
+6. Medians and Order Statistics  
+7. Greedy Algorithms  
 8. spring vacation
 9. quiz
 10. Dynamic Programming(1)
