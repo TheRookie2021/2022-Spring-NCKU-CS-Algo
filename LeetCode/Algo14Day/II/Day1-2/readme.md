@@ -32,3 +32,11 @@ Output: -1
 3. To output the index of targeted number in the rotated array, adjust the index ```i```(asendent array) with ```k``` (to index of the rotated array): 
     - if ***i < k*** : ```return len(nums)-k+i```
     - if ***i >= k*** : ```return i-k```
+
+# Note 
+- implement with the concept of virtual memory mapping 
+    - rotated array as real memory address
+    - ascending array as virtual memory address
+    - binary search is implemented with virtual memory address
+- details: 
+    - there may be ***out of boundary*** index situation in binary search(which is a case to cease the while loop), so be sure to consider this case when converting the address (both Virtual to Real and Real to Virtual)

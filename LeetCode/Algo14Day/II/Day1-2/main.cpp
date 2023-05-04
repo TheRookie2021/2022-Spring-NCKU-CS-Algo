@@ -30,8 +30,8 @@ int pivotConvertRtoV(int index, int pivot, int len){
 
     // 0 1 2 |3 4 5 6
     // 0 1 2 |4 5 6 7
-
-    if(index<0)return index;
+    if(index>=len) return index;
+    if(index<0) return index;
     return index >= pivot ? (index -  pivot) : (index + (len-pivot));
 }
 
@@ -43,6 +43,8 @@ int pivotConvertVtoR(int index, int pivot, int len){
 
     // 0 1 2 3 |4 5 6
     // 4 5 6 7 |0 1 2
+    if(index>=len) return index;
+    if(index<0) return index;
     return index >= (len-pivot) ? (index - (len-pivot)) : (index + pivot);
 }
 
@@ -57,34 +59,40 @@ int binarySearch(vector<int> &nums, int target){
         if(nums[0]==target)return 0;
         else return -1;
     }
-    int pivot = findPivot(nums, 0, nums.size() - 1);
-    //real memory space
-    int left = pivotConvertVtoR(0, pivot, nums.size()) ;
-    int right = pivotConvertVtoR(nums.size()-1, pivot, nums.size());
-    int i =0;
-        cout <<"Real \t" <<left << " " << right << endl;
-        cout <<"virtual \t"<< pivotConvertRtoV(left, pivot, nums.size()) << " " << pivotConvertRtoV(right, pivot, nums.size())<<endl;
-        
-        //virtual binary search
-        while (i < 5 && pivotConvertRtoV(left, pivot, nums.size()) <= pivotConvertRtoV(right, pivot, nums.size())) // bug: must be <=, think about the case with one element
-        {
-            int virtual_mid = (pivotConvertRtoV(left, pivot, nums.size()) + pivotConvertRtoV(right, pivot, nums.size())) / 2;
-            i++;
-            cout << "Real \t" << left << " " <<  pivotConvertVtoR(virtual_mid, pivot, nums.size())<< " " << right << endl;
-            cout << "Virtual \t" << pivotConvertRtoV(left, pivot, nums.size()) << " " << virtual_mid<< " " << pivotConvertRtoV(right, pivot, nums.size()) << endl;
 
-            if (target < nums[pivotConvertVtoR(virtual_mid, pivot, nums.size())])
-            {
-                right = pivotConvertVtoR(virtual_mid- 1, pivot, nums.size());
-            }
-            else if (nums[pivotConvertVtoR(virtual_mid, pivot, nums.size())] < target)
-            {
-                left = pivotConvertVtoR(virtual_mid+1, pivot, nums.size());
-            }
-            else
-            {
-                return pivotConvertVtoR(virtual_mid, pivot, nums.size());
-            }
+    int pivot = findPivot(nums, 0, nums.size() - 1);
+    
+    // represent real memory space
+    int left = pivotConvertVtoR(0, pivot, nums.size()) ;// to see where the smallest element is in rotated array
+    int right = pivotConvertVtoR(nums.size()-1, pivot, nums.size());
+    
+    // debug
+    // int i =0;
+    //     cout <<"Real \t" <<left << " " << right << endl;
+    //     cout <<"virtual \t"<< pivotConvertRtoV(left, pivot, nums.size()) << " " << pivotConvertRtoV(right, pivot, nums.size())<<endl;
+
+    // virtual binary search
+    while (pivotConvertRtoV(left, pivot, nums.size()) <= pivotConvertRtoV(right, pivot, nums.size())) // bug: must be <=, think about the case with one element
+    {
+        int virtual_mid = (pivotConvertRtoV(left, pivot, nums.size()) + pivotConvertRtoV(right, pivot, nums.size())) / 2;
+        
+        // debug
+        // i++;
+        // cout << "Real \t" << left << " " <<  pivotConvertVtoR(virtual_mid, pivot, nums.size())<< " " << right << endl;
+        // cout << "Virtual \t" << pivotConvertRtoV(left, pivot, nums.size()) << " " << virtual_mid<< " " << pivotConvertRtoV(right, pivot, nums.size()) << endl;
+
+        if (target < nums[pivotConvertVtoR(virtual_mid, pivot, nums.size())])
+        {
+            right = pivotConvertVtoR(virtual_mid - 1, pivot, nums.size());
+        }
+        else if (nums[pivotConvertVtoR(virtual_mid, pivot, nums.size())] < target)
+        {
+            left = pivotConvertVtoR(virtual_mid + 1, pivot, nums.size());
+        }
+        else
+        {
+            return pivotConvertVtoR(virtual_mid, pivot, nums.size());
+        }
     }
     return -1;
 }
@@ -92,8 +100,8 @@ int binarySearch(vector<int> &nums, int target){
 
 int main(){
     
-    // vector<int> nums={4,5,6,7,0,1,2};
-    // int target = 0;
+    vector<int> nums={4,5,6,7,0,1,2};
+    int target = 0;
     
     // vector<int> nums={1};
     // int target = 0;
@@ -103,8 +111,8 @@ int main(){
     
     // vector<int> nums={3,1};
     // int target = 1;
-    vector<int> nums={1,3};
-    int target = 4;
+    // vector<int> nums={1,3};
+    // int target = 4;
     cout<< "pivot "<<findPivot(nums,0,nums.size()-1);
     cout <<"\nans " <<binarySearch(nums, target);
     
