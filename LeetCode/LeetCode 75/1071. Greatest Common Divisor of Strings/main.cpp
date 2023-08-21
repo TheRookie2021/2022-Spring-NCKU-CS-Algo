@@ -10,7 +10,9 @@ string gcdOfStrings(string str1, string str2)
         return "";
     
     string gcd;
-    unordered_set<string> s_str1,s_str2;
+    unordered_set<string> s_str1,s_str2;// not working,  
+    // unordered_set are not sorted in any particular order, but organized into buckets depending on their hash values to allow for fast access
+
     for(int i =0; i<str1.size();i++){
         s_str1.insert(str1.substr(i,1));
     }
